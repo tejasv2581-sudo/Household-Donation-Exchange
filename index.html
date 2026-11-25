@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Household Donation Exchange</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="2.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">Household Donation Exchange</div>
+  <button class="btn primary" id="openForm">Give an item</button>
+</header>
+
+<section class="hero">
+  <h1>Got things you no longer use? Someone nearby needs them.</h1>
+  <p>List a reusable household item for free, or claim one from your neighbourhood.</p>
+  <div class="stats">
+    <span><b id="statTotal">0</b> items listed</span>
+    <span><b id="statAvail">0</b> available</span>
+    <span><b id="statClaimed">0</b> given away</span>
+  </div>
+</section>
+
+<main>
+  <div class="filters">
+    <input type="search" id="search" placeholder="Search items or location">
+    <select id="fCategory"><option value="">All categories</option></select>
+    <select id="fCondition">
+      <option value="">Any condition</option>
+      <option>Like new</option><option>Good</option><option>Fair</option><option>Needs repair</option>
+    </select>
+    <select id="fStatus">
+      <option value="available">Available only</option>
+      <option value="">Show all</option>
+    </select>
+  </div>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden>No items match. Try clearing filters, or list something yourself.</p>
+</main>
