@@ -1,0 +1,42 @@
+:root{
+  --paper:#f2f6f4; --card:#ffffff; --ink:#15211f; --muted:#5b6b67;
+  --teal:#0f5c54; --teal-d:#0a403b; --gold:#f2b632; --line:#d5dfdb; --red:#b3321f;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Figtree',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
+h1,h2,.brand{font-family:'Bricolage Grotesque',sans-serif}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:var(--teal);color:#fff;position:sticky;top:0;z-index:5}
+.brand{font-weight:800;font-size:1.15rem}
+.hero{padding:48px 5vw 28px;max-width:900px}
+.hero h1{font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.1;font-weight:800;color:var(--teal-d)}
+.hero p{margin-top:12px;color:var(--muted);font-size:1.05rem;max-width:560px}
+.stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px;color:var(--muted)}
+.stats b{color:var(--ink);font-size:1.3rem;font-family:'Bricolage Grotesque'}
+main{padding:0 5vw 60px}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px;margin:14px 0 22px}
+input,select,textarea{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;width:100%;color:var(--ink)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+.btn{font:inherit;font-weight:600;padding:10px 18px;border-radius:10px;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+.btn.primary{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn.primary:hover{background:#e6a820}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:4/3;background:#dfe9e5;display:grid;place-items:center;font-size:3rem;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.body h3{font-family:'Bricolage Grotesque';font-size:1.1rem}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:.78rem;padding:2px 9px;border-radius:99px;background:#e3efeb;color:var(--teal-d);font-weight:600}
+.tag.cond{background:#fdf0cc;color:#7a5600}
+.desc{font-size:.9rem;color:var(--muted)}
+.meta{font-size:.85rem;color:var(--muted);margin-top:auto}
+.card .btn{margin-top:8px;width:100%}
+.card.gone{opacity:.65}
+.card.gone .thumb::after{content:"Claimed";position:absolute;background:var(--teal);color:#fff;padding:4px 14px;border-radius:99px;font-weight:700}
+.thumb{position:relative}
+.empty{text-align:center;color:var(--muted);padding:50px 0}
+dialog{border:none;border-radius:var(--r);padding:24px;width:min(460px,92vw);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+dialog::backdrop{background:rgba(10,30,28,.55)}
+dialog h2{margin-bottom:14px;color:var(--teal-d)}
